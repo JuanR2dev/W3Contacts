@@ -6,11 +6,9 @@
     android:layout_height="match_parent"
     tools:context=".controllers.MainActivity">
 
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/contact_list"
+    <androidx.fragment.app.FragmentContainerView
+        android:id="@+id/contact_list_container"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
-        tools:listitem="@layout/contact_item"/>
+        android:layout_height="match_parent"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

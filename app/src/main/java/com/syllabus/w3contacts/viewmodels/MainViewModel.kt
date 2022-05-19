@@ -6,17 +6,15 @@ import androidx.lifecycle.ViewModelProvider
 import androidx.lifecycle.viewModelScope
 import com.syllabus.w3contacts.models.Contact
 import com.syllabus.w3contacts.models.MainDataBase
+import com.syllabus.w3contacts.repositories.ContactRepository
 import kotlinx.coroutines.launch
 
 class MainViewModel(private val app:Application) : ViewModel() {
 
     private val database by lazy { MainDataBase.getInstance(app) }
-    val contacts by lazy { database.contacts.getAll() }
+    private val contactRepo by lazy { ContactRepository(database) }
 
-    fun insert(contact: Contact) = viewModelScope.launch { database.contacts.insert(contact) }
-    fun update(contact: Contact) = viewModelScope.launch { database.contacts.update(contact) }
-    fun delete(contact: Contact) = viewModelScope.launch { database.contacts.delete(contact) }
-    fun getById(id: Int) = database.contacts.getById(id)
+    val contacts by lazy { contactRepo.getAll() }
 
 }
 
