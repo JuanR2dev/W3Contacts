@@ -9,7 +9,7 @@ import com.syllabus.w3contacts.models.MainDataBase
 import com.syllabus.w3contacts.repositories.ContactRepository
 import kotlinx.coroutines.launch
 
-class MainViewModel(private val app:Application) : ViewModel() {
+class MainViewModel(private val app: Application) : ViewModel() {
 
     private val database by lazy { MainDataBase.getInstance(app) }
     private val contactRepo by lazy { ContactRepository(database) }
