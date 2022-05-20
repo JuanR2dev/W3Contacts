@@ -1,3 +1,15 @@
 <resources>
     <string name="app_name">W3Contacts</string>
+
+    <!-- region Gender Options -->
+    <string name="gender_male">male</string>
+    <string name="gender_female">female</string>
+    <string name="gender_none">none</string>
+    <!-- endregion Gender Options -->
+
+    <!-- region Contact Strings -->
+    <string name="contact_years">years</string>
+    <string name="contact_avatar_description">Contact avatar iamge</string>
+    <!-- endregion Contact Strings -->
+
 </resources>

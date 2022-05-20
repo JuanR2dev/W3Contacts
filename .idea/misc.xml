@@ -3,8 +3,9 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Source/W3Contacts/app/src/main/res/drawable/circle_border.xml" value="0.142" />
         <entry key="..\:/Source/W3Contacts/app/src/main/res/layout/activity_main.xml" value="0.1859375" />
-        <entry key="..\:/Source/W3Contacts/app/src/main/res/layout/contact_item.xml" value="0.2" />
+        <entry key="..\:/Source/W3Contacts/app/src/main/res/layout/contact_item.xml" value="0.33" />
         <entry key="..\:/Source/W3Contacts/app/src/main/res/layout/contact_list_item.xml" value="0.2" />
         <entry key="..\:/Source/W3Contacts/app/src/main/res/layout/fragment_contact_list.xml" value="0.25" />
       </map>

@@ -3,6 +3,7 @@ package com.syllabus.w3contacts.controllers
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.syllabus.w3contacts.R
@@ -26,10 +27,11 @@ class ContactAdapter : RecyclerView.Adapter<ContactAdapter.ViewHolder>() {
 
     class ViewHolder(view: View) : RecyclerView.ViewHolder(view) {
 
-        val txtText by lazy { view.findViewById<TextView>(R.id.txt_text) }
+        private val avatar:ImageView by lazy { view.findViewById(R.id.contact_avatar) }
+        private val name:TextView by lazy { view.findViewById(R.id.contact_name) }
 
         fun bind(contact: Contact) {
-            txtText.text = contact.firstname
+            name.text = contact.completeName
         }
 
     }
