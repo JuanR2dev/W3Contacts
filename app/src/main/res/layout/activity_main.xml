@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools">
 
     <data>
+
         <variable
             name="viewmodel"
             type="com.syllabus.w3contacts.viewmodels.MainViewModel" />
@@ -16,6 +17,11 @@
 
         <androidx.fragment.app.FragmentContainerView
             android:id="@+id/contact_list_container"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+        <androidx.fragment.app.FragmentContainerView
+            android:id="@+id/contact_info_container"
             android:layout_width="match_parent"
             android:layout_height="match_parent" />
 

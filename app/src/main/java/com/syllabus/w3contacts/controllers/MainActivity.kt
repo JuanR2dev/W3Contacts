@@ -17,7 +17,6 @@ import com.syllabus.w3contacts.viewmodels.MainViewModelFactory
 class MainActivity : AppCompatActivity() {
 
     private val viewmodel: MainViewModel by viewModels { MainViewModelFactory(application) }
-    private val contactListContainer: FragmentContainerView by lazy { findViewById(R.id.contact_list_container) }
     private lateinit var binding: ActivityMainBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -34,7 +33,11 @@ class MainActivity : AppCompatActivity() {
         }
 
         viewmodel.selected.observe(this, Observer {
-            Toast.makeText(this, it?.firstname, Toast.LENGTH_SHORT).show()
+            supportFragmentManager.commit {
+                replace<ContactInfoFragment>(R.id.contact_info_container)
+                setReorderingAllowed(true)
+                addToBackStack("contact_info")
+            }
         })
 
     }
