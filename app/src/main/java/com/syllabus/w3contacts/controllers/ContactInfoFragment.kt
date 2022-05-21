@@ -23,10 +23,6 @@ class ContactInfoFragment : Fragment() {
         )
     }
 
-    fun bind(view: View) {
-
-    }
-
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
@@ -35,10 +31,7 @@ class ContactInfoFragment : Fragment() {
             DataBindingUtil.inflate(inflater, R.layout.fragment_contact_info, container, false)
         binding.lifecycleOwner = viewLifecycleOwner
         binding.viewmodel = viewmodel
-
-        val view = binding.root
-        bind(view)
-        return view
+        return  binding.root
     }
 
 }

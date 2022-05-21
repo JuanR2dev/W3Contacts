@@ -25,7 +25,7 @@ class ContactListFragment : Fragment() {
     }
     private lateinit var binding: FragmentContactListBinding
 
-    private fun bind(view: View) {
+    private fun bind() {
         val adapter = ContactAdapter(viewmodel)
         binding.contactList.adapter = adapter
         viewmodel.contacts.observe(viewLifecycleOwner, Observer {
@@ -43,10 +43,8 @@ class ContactListFragment : Fragment() {
             DataBindingUtil.inflate(inflater, R.layout.fragment_contact_list, container, false)
         binding.lifecycleOwner = viewLifecycleOwner
         binding.viewmodel = viewmodel
-
-        val view = binding.root
-        bind(view)
-        return view
+        bind()
+        return binding.root
     }
 
 }
