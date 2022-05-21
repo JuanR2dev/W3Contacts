@@ -1,6 +1,7 @@
 package com.syllabus.w3contacts.viewmodels
 
 import android.app.Application
+import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider
 import androidx.lifecycle.viewModelScope
@@ -15,6 +16,7 @@ class MainViewModel(private val app: Application) : ViewModel() {
     private val contactRepo by lazy { ContactRepository(database) }
 
     val contacts by lazy { contactRepo.getAll() }
+    var selected: MutableLiveData<Contact?> = MutableLiveData()
 
 }
 

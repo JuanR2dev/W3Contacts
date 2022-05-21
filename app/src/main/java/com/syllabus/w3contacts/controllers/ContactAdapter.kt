@@ -5,11 +5,15 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
+import android.widget.Toast
+import androidx.lifecycle.MutableLiveData
 import androidx.recyclerview.widget.RecyclerView
 import com.syllabus.w3contacts.R
 import com.syllabus.w3contacts.models.Contact
+import com.syllabus.w3contacts.viewmodels.MainViewModel
 
-class ContactAdapter : RecyclerView.Adapter<ContactAdapter.ViewHolder>() {
+class ContactAdapter(val viewmodel: MainViewModel) :
+    RecyclerView.Adapter<ContactAdapter.ViewHolder>() {
 
     var contacts = listOf<Contact>()
 
@@ -20,6 +24,9 @@ class ContactAdapter : RecyclerView.Adapter<ContactAdapter.ViewHolder>() {
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         val contact = contacts[position]
+        holder.itemView.setOnClickListener {
+            viewmodel.selected.postValue(contacts[position])
+        }
         holder.bind(contact)
     }
 
@@ -27,8 +34,8 @@ class ContactAdapter : RecyclerView.Adapter<ContactAdapter.ViewHolder>() {
 
     class ViewHolder(view: View) : RecyclerView.ViewHolder(view) {
 
-        private val avatar:ImageView by lazy { view.findViewById(R.id.contact_avatar) }
-        private val name:TextView by lazy { view.findViewById(R.id.contact_name) }
+        private val avatar: ImageView by lazy { view.findViewById(R.id.contact_avatar) }
+        private val name: TextView by lazy { view.findViewById(R.id.contact_name) }
 
         fun bind(contact: Contact) {
             name.text = contact.completeName

@@ -2,11 +2,13 @@ package com.syllabus.w3contacts.controllers
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.widget.Toast
 import androidx.activity.viewModels
 import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.FragmentContainerView
 import androidx.fragment.app.commit
 import androidx.fragment.app.replace
+import androidx.lifecycle.Observer
 import com.syllabus.w3contacts.R
 import com.syllabus.w3contacts.databinding.ActivityMainBinding
 import com.syllabus.w3contacts.viewmodels.MainViewModel
@@ -28,8 +30,12 @@ class MainActivity : AppCompatActivity() {
         supportFragmentManager.commit {
             replace<ContactListFragment>(R.id.contact_list_container)
             setReorderingAllowed(true)
-            addToBackStack("contact_list")
+            // addToBackStack("contact_list")
         }
+
+        viewmodel.selected.observe(this, Observer {
+            Toast.makeText(this, it?.firstname, Toast.LENGTH_SHORT).show()
+        })
 
     }
 

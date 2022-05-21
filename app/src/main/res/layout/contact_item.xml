@@ -43,7 +43,8 @@
             android:text="@{item.completeName}"
             app:layout_constraintLeft_toRightOf="@id/contact_avatar_card"
             tools:ignore="MissingConstraints"
-            tools:text="Some name here" />
+            tools:text="Some name here"
+            android:textSize="20sp"/>
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>

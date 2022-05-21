@@ -5,6 +5,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Toast
 import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.activityViewModels
 import androidx.lifecycle.Observer
@@ -17,13 +18,17 @@ import com.syllabus.w3contacts.viewmodels.MainViewModelFactory
 
 class ContactListFragment : Fragment() {
 
-    private val viewmodel: MainViewModel by activityViewModels { MainViewModelFactory(requireActivity().application) }
+    private val viewmodel: MainViewModel by activityViewModels {
+        MainViewModelFactory(
+            requireActivity().application
+        )
+    }
     private lateinit var contactList: RecyclerView
     private lateinit var binding: FragmentContactListBinding
 
     private fun bind(view: View) {
         contactList = view.findViewById(R.id.contact_list)
-        val adapter = ContactAdapter()
+        val adapter = ContactAdapter(viewmodel)
         contactList.adapter = adapter
         viewmodel.contacts.observe(viewLifecycleOwner, Observer {
             adapter.contacts = it
@@ -36,7 +41,8 @@ class ContactListFragment : Fragment() {
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        binding = DataBindingUtil.inflate(inflater, R.layout.fragment_contact_list, container, false)
+        binding =
+            DataBindingUtil.inflate(inflater, R.layout.fragment_contact_list, container, false)
         binding.lifecycleOwner = viewLifecycleOwner
         binding.viewmodel = viewmodel
 
