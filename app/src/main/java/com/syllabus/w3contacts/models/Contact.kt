@@ -18,12 +18,14 @@ class Contact(
 ) {
 
     val completeName get() = "$firstname $lastname"
+    val formatEmail get() = email ?: "..."
+    val formatPhoneNumber get() = phoneNumber ?: "..."
 
     fun getFormatGender(context: Context): String {
         return when (gender) {
             Gender.Male -> context.getString(R.string.gender_male)
             Gender.Female -> context.getString(R.string.gender_female)
-            else -> context.getString(R.string.gender_none)
+            else -> ""
         }
     }
 
