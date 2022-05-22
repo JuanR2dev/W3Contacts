@@ -6,11 +6,15 @@ import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
 import android.widget.Toast
+import androidx.databinding.DataBindingUtil
 import androidx.lifecycle.MutableLiveData
 import androidx.recyclerview.widget.RecyclerView
 import com.syllabus.w3contacts.R
+import com.syllabus.w3contacts.databinding.ContactItemBinding
 import com.syllabus.w3contacts.models.Contact
+import com.syllabus.w3contacts.models.Gender
 import com.syllabus.w3contacts.viewmodels.MainViewModel
+import kotlin.coroutines.coroutineContext
 
 class ContactAdapter(val viewmodel: MainViewModel) :
     RecyclerView.Adapter<ContactAdapter.ViewHolder>() {
@@ -18,8 +22,13 @@ class ContactAdapter(val viewmodel: MainViewModel) :
     var contacts = listOf<Contact>()
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
-        val view = LayoutInflater.from(parent.context).inflate(R.layout.contact_item, parent, false)
-        return ViewHolder(view)
+        val binding: ContactItemBinding = DataBindingUtil.inflate(
+            LayoutInflater.from(parent.context),
+            R.layout.contact_item,
+            parent,
+            false
+        )
+        return ViewHolder(binding)
     }
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
@@ -32,13 +41,11 @@ class ContactAdapter(val viewmodel: MainViewModel) :
 
     override fun getItemCount(): Int = contacts.size
 
-    class ViewHolder(view: View) : RecyclerView.ViewHolder(view) {
-
-        private val avatar: ImageView by lazy { view.findViewById(R.id.contact_avatar) }
-        private val name: TextView by lazy { view.findViewById(R.id.contact_name) }
+    class ViewHolder(private val binding: ContactItemBinding) :
+        RecyclerView.ViewHolder(binding.root) {
 
         fun bind(contact: Contact) {
-            name.text = contact.completeName
+            binding.item = contact
         }
 
     }

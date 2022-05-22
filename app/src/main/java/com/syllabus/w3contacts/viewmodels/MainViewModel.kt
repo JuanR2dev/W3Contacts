@@ -6,6 +6,7 @@ import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider
 import androidx.lifecycle.viewModelScope
 import com.syllabus.w3contacts.models.Contact
+import com.syllabus.w3contacts.models.Gender
 import com.syllabus.w3contacts.models.MainDataBase
 import com.syllabus.w3contacts.repositories.ContactRepository
 import kotlinx.coroutines.launch
@@ -17,6 +18,23 @@ class MainViewModel(private val app: Application) : ViewModel() {
 
     val contacts by lazy { contactRepo.getAll() }
     var selected: MutableLiveData<Contact?> = MutableLiveData()
+
+    /*
+    init {
+        viewModelScope.launch {
+            contactRepo.insert(
+                Contact(
+                    firstname = "Juan Jesus",
+                    lastname = "Chavez Villa",
+                    age = 22,
+                    gender = Gender.Male,
+                    email = "juanjesus.chavez@r2devpros.com",
+                    phoneNumber = "8611175346"
+                )
+            )
+        }
+    }
+    */
 
 }
 

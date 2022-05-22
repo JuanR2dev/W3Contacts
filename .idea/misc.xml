@@ -4,10 +4,19 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="..\:/Source/W3Contacts/app/src/main/res/drawable/circle_border.xml" value="0.142" />
+        <entry key="..\:/Source/W3Contacts/app/src/main/res/drawable/ic_at.xml" value="0.1" />
+        <entry key="..\:/Source/W3Contacts/app/src/main/res/drawable/ic_gear.xml" value="0.1" />
+        <entry key="..\:/Source/W3Contacts/app/src/main/res/drawable/ic_genderless.xml" value="0.1" />
+        <entry key="..\:/Source/W3Contacts/app/src/main/res/drawable/ic_image.xml" value="0.1" />
+        <entry key="..\:/Source/W3Contacts/app/src/main/res/drawable/ic_location_dot.xml" value="0.1" />
+        <entry key="..\:/Source/W3Contacts/app/src/main/res/drawable/ic_mars.xml" value="0.1" />
+        <entry key="..\:/Source/W3Contacts/app/src/main/res/drawable/ic_phone.xml" value="0.1" />
+        <entry key="..\:/Source/W3Contacts/app/src/main/res/drawable/ic_user_pen.xml" value="0.1" />
+        <entry key="..\:/Source/W3Contacts/app/src/main/res/drawable/ic_venus.xml" value="0.1" />
         <entry key="..\:/Source/W3Contacts/app/src/main/res/layout/activity_main.xml" value="0.1859375" />
         <entry key="..\:/Source/W3Contacts/app/src/main/res/layout/contact_item.xml" value="0.33" />
         <entry key="..\:/Source/W3Contacts/app/src/main/res/layout/contact_list_item.xml" value="0.2" />
-        <entry key="..\:/Source/W3Contacts/app/src/main/res/layout/fragment_contact_info.xml" value="0.2" />
+        <entry key="..\:/Source/W3Contacts/app/src/main/res/layout/fragment_contact_info.xml" value="0.33" />
         <entry key="..\:/Source/W3Contacts/app/src/main/res/layout/fragment_contact_list.xml" value="0.25" />
       </map>
     </option>
