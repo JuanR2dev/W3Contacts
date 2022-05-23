@@ -8,6 +8,7 @@ import android.view.ViewGroup
 import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.activityViewModels
 import androidx.lifecycle.Observer
+import com.bumptech.glide.Glide
 import com.syllabus.w3contacts.R
 import com.syllabus.w3contacts.databinding.FragmentContactInfoBinding
 import com.syllabus.w3contacts.databinding.FragmentContactListBinding
@@ -41,6 +42,8 @@ class ContactInfoFragment : Fragment() {
                     Gender.None -> R.drawable.ic_genderless
                 }
             )
+            Glide.with(binding.contactAvatar).load(it?.avatarURL).placeholder(R.drawable.ic_user)
+                .into(binding.contactAvatar)
         }
         return binding.root
     }

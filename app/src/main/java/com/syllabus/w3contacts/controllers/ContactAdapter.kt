@@ -9,6 +9,7 @@ import android.widget.Toast
 import androidx.databinding.DataBindingUtil
 import androidx.lifecycle.MutableLiveData
 import androidx.recyclerview.widget.RecyclerView
+import com.bumptech.glide.Glide
 import com.syllabus.w3contacts.R
 import com.syllabus.w3contacts.databinding.ContactItemBinding
 import com.syllabus.w3contacts.models.Contact
@@ -45,7 +46,11 @@ class ContactAdapter(val viewmodel: MainViewModel) :
         RecyclerView.ViewHolder(binding.root) {
 
         fun bind(contact: Contact) {
-            binding.item = contact
+            contact.apply {
+                binding.item = this
+                Glide.with(binding.contactAvatar).load(avatarURL).placeholder(R.drawable.ic_user)
+                    .into(binding.contactAvatar)
+            }
         }
 
     }

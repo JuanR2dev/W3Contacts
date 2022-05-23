@@ -5,7 +5,6 @@
     android:background="@color/white">
 
     <data>
-
         <variable
             name="viewmodel"
             type="com.syllabus.w3contacts.viewmodels.MainViewModel" />
