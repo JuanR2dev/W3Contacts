@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">W3Contacts</string>
+
+    <!-- region Gender Options -->
+    <string name="gender_male">hombre</string>
+    <string name="gender_female">mujer</string>
+    <string name="gender_none">indefinido</string>
+    <!-- endregion Gender Options -->
+
+    <!-- region Contact Strings -->
+    <string name="contact_years">años</string>
+    <string name="contact_avatar_description">Imagen de avatar del contact</string>
+    <!-- endregion Contact Strings -->
+</resources>

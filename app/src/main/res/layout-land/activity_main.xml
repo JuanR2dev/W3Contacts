@@ -16,10 +16,20 @@
         tools:context=".controllers.MainActivity">
 
         <androidx.fragment.app.FragmentContainerView
-            android:id="@+id/contact_fragment_container"
-            android:layout_width="match_parent"
+            android:id="@+id/contact_list_container"
+            android:layout_width="300dp"
             android:layout_height="match_parent"
-            tools:name="com.syllabus.w3contacts.controllers.ContactListFragment"/>
+            tools:ignore="MissingConstraints"
+            tools:name="com.syllabus.w3contacts.controllers.ContactListFragment" />
+
+        <androidx.fragment.app.FragmentContainerView
+            android:id="@+id/contact_info_container"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            app:layout_constraintLeft_toRightOf="@id/contact_list_container"
+            app:layout_constraintRight_toRightOf="parent"
+            tools:ignore="MissingConstraints"
+            tools:name="com.syllabus.w3contacts.controllers.ContactInfoFragment" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>

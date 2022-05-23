@@ -27,14 +27,19 @@ class MainActivity : AppCompatActivity() {
         binding.viewmodel = viewmodel
 
         supportFragmentManager.commit {
-            replace<ContactListFragment>(R.id.contact_list_container)
+            if (binding.contactFragmentContainer != null)
+                replace<ContactListFragment>(R.id.contact_fragment_container)
+            else
+                replace<ContactListFragment>(R.id.contact_list_container)
             setReorderingAllowed(true)
-            // addToBackStack("contact_list")
         }
 
         viewmodel.selected.observe(this, Observer {
             supportFragmentManager.commit {
-                replace<ContactInfoFragment>(R.id.contact_info_container)
+                if (binding.contactFragmentContainer != null)
+                    replace<ContactInfoFragment>(R.id.contact_fragment_container)
+                else
+                    replace<ContactInfoFragment>(R.id.contact_info_container)
                 setReorderingAllowed(true)
                 addToBackStack("contact_info")
             }
