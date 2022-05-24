@@ -5,6 +5,7 @@
     android:background="@color/white">
 
     <data>
+
         <variable
             name="viewmodel"
             type="com.syllabus.w3contacts.viewmodels.MainViewModel" />
@@ -19,10 +20,10 @@
         <androidx.cardview.widget.CardView
             android:id="@+id/contact_avatar_card"
             style="@style/ConstraintCenterH"
-            android:layout_width="100dp"
-            android:layout_height="100dp"
+            android:layout_width="120dp"
+            android:layout_height="120dp"
             android:foreground="@drawable/circle_border"
-            app:cardCornerRadius="50dp"
+            app:cardCornerRadius="60dp"
             app:layout_constraintTop_toTopOf="parent"
             tools:ignore="MissingConstraints">
 
@@ -30,6 +31,7 @@
                 android:id="@id/contact_avatar"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
+                android:contentDescription="@string/contact_avatar_description"
                 android:src="@drawable/ic_user" />
         </androidx.cardview.widget.CardView>
 
@@ -57,6 +59,7 @@
                 android:id="@+id/gender_icon"
                 style="@style/CardIcon"
                 android:layout_row="0"
+                android:contentDescription="@string/contact_gender_description"
                 android:src="@drawable/ic_genderless" />
 
             <TextView
@@ -69,6 +72,7 @@
             <ImageView
                 style="@style/CardIcon"
                 android:layout_row="1"
+                android:contentDescription="@string/contact_email_description"
                 android:src="@drawable/ic_at" />
 
             <TextView
@@ -79,6 +83,7 @@
                 tools:text="some@email.here" />
 
             <ImageView
+                android:contentDescription="@string/contact_phone_description"
                 style="@style/CardIcon"
                 android:layout_row="2"
                 android:src="@drawable/ic_phone" />

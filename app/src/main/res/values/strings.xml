@@ -9,7 +9,10 @@
 
     <!-- region Contact Strings -->
     <string name="contact_years">years</string>
-    <string name="contact_avatar_description">Contact avatar iamge</string>
+    <string name="contact_avatar_description">Contact avatar image</string>
+    <string name="contact_gender_description">Contact gender icon</string>
+    <string name="contact_email_description">Contact email icon</string>
+    <string name="contact_phone_description">Contact phone number icon</string>
     <!-- endregion Contact Strings -->
 
 </resources>

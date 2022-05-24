@@ -12,7 +12,9 @@
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:background="@color/contact_item_color"
+        android:layout_margin="1dp">
 
         <androidx.cardview.widget.CardView
             android:id="@+id/contact_avatar_card"

@@ -3,14 +3,17 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Source/W3Contacts/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.142" />
         <entry key="..\:/Source/W3Contacts/app/src/main/res/drawable/circle_border.xml" value="0.142" />
         <entry key="..\:/Source/W3Contacts/app/src/main/res/drawable/ic_at.xml" value="0.1" />
         <entry key="..\:/Source/W3Contacts/app/src/main/res/drawable/ic_gear.xml" value="0.1" />
         <entry key="..\:/Source/W3Contacts/app/src/main/res/drawable/ic_genderless.xml" value="0.1" />
         <entry key="..\:/Source/W3Contacts/app/src/main/res/drawable/ic_image.xml" value="0.1" />
+        <entry key="..\:/Source/W3Contacts/app/src/main/res/drawable/ic_launcher_background.xml" value="0.142" />
         <entry key="..\:/Source/W3Contacts/app/src/main/res/drawable/ic_location_dot.xml" value="0.1" />
         <entry key="..\:/Source/W3Contacts/app/src/main/res/drawable/ic_mars.xml" value="0.1" />
         <entry key="..\:/Source/W3Contacts/app/src/main/res/drawable/ic_phone.xml" value="0.1" />
+        <entry key="..\:/Source/W3Contacts/app/src/main/res/drawable/ic_user.xml" value="0.142" />
         <entry key="..\:/Source/W3Contacts/app/src/main/res/drawable/ic_user_pen.xml" value="0.1" />
         <entry key="..\:/Source/W3Contacts/app/src/main/res/drawable/ic_venus.xml" value="0.1" />
         <entry key="..\:/Source/W3Contacts/app/src/main/res/layout-land/activity_main.xml" value="0.22" />

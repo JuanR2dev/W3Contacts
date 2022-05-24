@@ -7,4 +7,16 @@
     <color name="teal_700">#FF018786</color>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+
+    <!-- region Icon Colors -->
+    <color name="iconColor">#90CAF9</color>
+    <color name="backColor">#EEEEEE</color>
+    <color name="borderColor">#DDDDDD</color>
+    <color name="gender_none_color">#4CAF50</color>
+    <color name="gender_male_color">#3F51B5</color>
+    <color name="gender_female_color">#F06292</color>
+    <color name="placeholderColor">#606060</color>
+    <color name="contact_item_color">#CDC6DA</color>
+    <!-- endregion Icon Colors -->
+
 </resources>
